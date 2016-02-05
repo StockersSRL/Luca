@@ -1,7 +1,7 @@
 <?php
 require "include/fpdf.php";
 require "include/clases.php";
-class PDF extends FPDF{
+class PDF extends FPDF{/*
 	function Header(){
 	global $lci;
 	global $lnombre;
@@ -38,10 +38,10 @@ class PDF extends FPDF{
 	$this->Ln();
 	$this->SetTextColor(0);
 	$this->Cell((297-10-10)/2, 5, "$dia de $meses[$mes] de $ano, ".date_format($hoy, "H:i:s"), 0, 0, "L");
-	$this->Cell((297-10-10)/2, 5, "P�gina ".$this->PageNo()."/{nb}", 0, 0, "R");
-	}
+	$this->Cell((297-10-10)/2, 5, utf8_decode("Página ").$this->PageNo()."/{nb}", 0, 0, "R");
+	}*/
 }
-$pdf=new PDF('L', 'mm', 'A4');
+$pdf=new PDF('P', 'mm', 'A4');
 $pdf->SetMargins(10, 10, 10);
 $pdf->AliasNbPages();
 
@@ -68,7 +68,7 @@ while($fila=mysqli_fetch_object($resultado)){
 	$pdf->Cell($lcargo, 5, utf8_decode($fila->Cargo), 1, 0, 'L', 1);
 	$pdf->Ln();
 	$i++;
-}*/
+}
 
 
 for($i=0; $i<50; $i++){
@@ -81,7 +81,9 @@ for($i=0; $i<50; $i++){
 	$pdf->Cell($lsucursal, 5, "algo", 1, 0, 'C',1);
 	$pdf->Cell($lcargo, 5, "CEO", 1, 0, 'L', 1);
 	$pdf->Ln();
-}
+}*/
 
+
+$pdf->Image('fontanero.jpg',10,10,-300);
 $pdf->Output('usuarios.pdf', 'I');
 ?>
