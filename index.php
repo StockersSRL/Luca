@@ -38,8 +38,44 @@ class PDF extends FPDF{/*
 	$this->Ln();
 	$this->SetTextColor(0);
 	$this->Cell((297-10-10)/2, 5, "$dia de $meses[$mes] de $ano, ".date_format($hoy, "H:i:s"), 0, 0, "L");
-	$this->Cell((297-10-10)/2, 5, utf8_decode("Página ").$this->PageNo()."/{nb}", 0, 0, "R");
+	$this->Cell((297-10-10s)/2, 5, utf8_decode("Página ").$this->PageNo()."/{nb}", 0, 0, "R");
 	}*/
+
+    const DPI = 96;
+    const MM_IN_INCH = 25.4;
+    const A4_HEIGHT = 210;
+    const A4_WIDTH = 297;
+    // tweak these values (in pixels)
+    const MAX_WIDTH = 800;
+    const MAX_HEIGHT = 500;
+    function pixelsToMM($val) {
+        return $val * self::MM_IN_INCH / self::DPI;
+    }
+    function resizeToFit($imgFilename) {
+        list($width, $height) = getimagesize($imgFilename);
+        $widthScale = self::MAX_WIDTH / $width;
+        $heightScale = self::MAX_HEIGHT / $height;
+        $scale = min($widthScale, $heightScale);
+        return array(
+            round($this->pixelsToMM($scale * $width)),
+            round($this->pixelsToMM($scale * $height))
+        );
+    }
+    function centreImage($img) {
+        list($width, $height) = $this->resizeToFit($img);
+        // you will probably want to swap the width/height
+        // around depending on the page's orientation
+        $this->Image(
+            $img, (self::A4_HEIGHT - $width) / 2,
+            (self::A4_WIDTH - $height) / 2,
+            $width,
+            $height
+        );
+    }
+    
+    
+    
+    
 }
 $pdf=new PDF('P', 'mm', 'A4');
 $pdf->SetMargins(10, 10, 10);
@@ -84,6 +120,6 @@ for($i=0; $i<50; $i++){
 }*/
 
 
-$pdf->Image('fontanero.jpg',10,10,-300);
-$pdf->Output('usuarios.pdf', 'I');
+$pdf->centreImage('fontanero.jpg');
+$pdf->Output('test.pdf', 'I');
 ?>
