@@ -77,11 +77,33 @@ $pdf->SetFillColor(0);
 $pdf->Rect($x-$border, $y-$border, $width+2*$border, $height+2*$border, 'F');
 $pdf->Image('images/metasul.jpg', $x, $y, $width, $height);
 
-//FOOT
+//SEPARATOR
 $y=297-35.541;
 $width=192.284;
 $x=(210-$width)/2;
 $pdf->Rect($x, $y, $width, $border, 'F');
+
+//SEPARATOR
+$y=297-35.541;
+$width=192.284;
+$x=(210-$width)/2;
+
+//TEXT
+$pdf->AddFont('Bodoni MT', 'B', 'bod_b.php');
+$pdf->SetFont('Bodoni MT', 'B', 16);
+$pdf->SetMargins(0, 0, 0);
+$pdf->SetAutoPageBreak(true, 0);
+$pdf->SetXY(0, 297-31.32);
+$txt='PAYSANDÚ 1215 APTO 101      TEL/FAX : 2902 7764      CEL : 099 27 41 81';
+$txt=  utf8_decode($txt);
+$pdf->Cell(0, 7, $txt, 0, 0, 'C');
+$pdf->Ln();
+$pdf->Ln();
+$txt='E-MAIL : marcoserpi@hotmail.com';
+$txt=  utf8_decode($txt);
+$pdf->Cell(0, 0, $txt, 0, 1, 'C');
+
+
 
 $pdf->Output('test.pdf', 'I');
 ?>
