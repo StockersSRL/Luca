@@ -1,7 +1,6 @@
 <?php
 require "include/clases.php";
-
-$pdf=new PDF('P', 'mm', 'A4');
+$pdf=new FPDF('P', 'mm', 'A4');
 $pdf->AliasNbPages();
 /*
 $hoy = date_create();
@@ -44,12 +43,45 @@ for($i=0; $i<50; $i++){
 	$pdf->Ln();
 }*/
 
-$img = new IMG('fontanero.jpg');
-$pdf->setImgCanvasSize($img);
-$img->maxHeight=98;
-$img->maxWidth=96;
-$img->center();
-$pdf->img($img);
+//TALMET
+$x=15.175;
+$y=297-283.295;
+$border=$x-14.32;
+$height=58.779;
+$width=180.656;
+$pdf->SetFillColor(0, 0, 128);
+$pdf->Rect($x-$border, $y-$border, $width+2*$border, $height+2*$border, 'F');
+$pdf->Image('images/talmet.jpg', $x, $y, $width, $height);
+
+//FONTANERO
+$pdf->Image('images/fontanero.jpg', 53.734, 297-201.132, 97.852);
+
+//FERE
+$x=17.141;
+$y=297-66.26;
+$height=19.707;
+$width=48.605;
+$pdf->SetFillColor(0);
+$pdf->Rect($x-$border, $y-$border, $width+2*$border, $height+2*$border, 'F');
+$pdf->Image('images/fere.jpg', $x, $y, $width, $height);
+
+//CLIUS
+$x=80.067;
+$pdf->SetFillColor(255, 0, 0);
+$pdf->Rect($x-$border, $y-$border, $width+2*$border, $height+2*$border, 'F');
+$pdf->Image('images/clius.jpg', $x, $y, $width, $height);
+
+//METASUL
+$x=141.027;
+$pdf->SetFillColor(0);
+$pdf->Rect($x-$border, $y-$border, $width+2*$border, $height+2*$border, 'F');
+$pdf->Image('images/metasul.jpg', $x, $y, $width, $height);
+
+//FOOT
+$y=297-35.541;
+$width=192.284;
+$x=(210-$width)/2;
+$pdf->Rect($x, $y, $width, $border, 'F');
 
 $pdf->Output('test.pdf', 'I');
 ?>
