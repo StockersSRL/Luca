@@ -3,7 +3,30 @@
 require "include/clases.php";
 require "include/draw.php";
 
-class PDF extends FPDF{
+class PDF extends PDF_Draw{
+    function Header(){
+        if ( $this->PageNo() !== 1 ) {
+            global $categoria;
+            $txt = $categoria;
+            $txt=  utf8_decode($txt);
+            $txt= strtoupper($txt);
+            $x=15.202;
+            $y=297-293.667;
+            $w=179.596;
+            $h=30.31;
+            $this->RoundedRect($x, $y, $w , $h, 7, '0101', 'F', null, array(247, 217,23));
+            $fontsize=72;
+            $this->SetFont('Arial', 'B', $fontsize);
+            $this->SetTextColor(70, 152, 199);
+            $this->setXY($x, $y);
+            while($this->GetStringWidth($txt)>$w){
+                $fontsize--;
+                $this->SetFontSize($fontsize);
+            }
+            $this->Cell($w, $h, $txt, 0, 0, 'C');
+        }
+    }
+    
     function Footer() {
         if ( $this->PageNo() !== 1 ) {
             //SEPARATOR
@@ -17,19 +40,31 @@ class PDF extends FPDF{
             $txt = utf8_decode($txt);
             $this->Cell(0, 4.4, $txt, 0, 0);
             
+            //PAGE
             $this->setX(75);
-            $txt = "PÁGINA ".$this->PageNo()."/{nb}";
+            $txt = "Página ".$this->PageNo()."/{nb}";
             $txt = utf8_decode($txt);
-            
             $this->Cell(173.282-75, 4.4, $txt, 0, 1, 'R');
             
+            //TEXT
             $txt = 'TEL/FAX : 2902 7764';
             $txt = utf8_decode($txt);
             $this->Cell(0, 4.4, $txt, 0, 1);
             
             $txt = 'CEL : 099 27 41 81';
             $txt = utf8_decode($txt);
-            $this->Cell(0, 4.4, $txt, 0, 1);
+            $this->Cell(0, 4.4, $txt, 0, 0);
+            
+            //DATE
+            global $hoy;
+            $meses=array(1=>"enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre");
+            $ano = date_format($hoy, "Y");
+            $mes = (int) date_format($hoy, "m");
+            $dia = date_format($hoy, "j");
+            $this->setX(75);
+            $txt = "$dia de $meses[$mes] de $ano, ".date_format($hoy, "H:i");
+            $txt = utf8_decode($txt);
+            $this->Cell(173.282-75, 4.4, $txt, 0, 1, 'R');
             
             //IMAGE
             $this->Image('images/fontanero.jpg', 173.282, 297-27.546, 21.302);
@@ -45,6 +80,7 @@ $pdf->SetAutoPageBreak(true, 6.088);
 $pdf->AddFont('Bodoni MT', 'B', 'bod_b.php');
 $pdf->AddFont('Arial', '', 'arial.php');
 $pdf->AddFont('Arial', 'B', 'arialbd.php');
+$hoy = date_create();
 
 /*
   $hoy = date_create();
@@ -135,7 +171,6 @@ $pdf->Ln();
 $txt = 'E-MAIL : marcoserpi@hotmail.com';
 $txt = utf8_decode($txt);
 $pdf->Cell(0, 0, $txt, 0, 1, 'C');
-
 
 $pdf->AddPage();
 
