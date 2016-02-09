@@ -1,6 +1,4 @@
 <?php
-require "include/fpdf.php";
-
 define('DB_SERVER','localhost'); 
 define('DB_NAME','sm'); 
 define('DB_USER','root'); 

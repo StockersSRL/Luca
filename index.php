@@ -1,13 +1,37 @@
 <?php
 
 require "include/clases.php";
+require "include/draw.php";
 
 class PDF extends FPDF{
     function Footer() {
         if ( $this->PageNo() !== 1 ) {
+            //SEPARATOR
             $this->SetY(297-28.605);
             $this->Cell(0, 0.683, '', 0, 1, '', true);
             
+            //TEXT
+            $this->SetFont('Arial', 'B', 12);
+            $this->SetY(297-23.803);
+            $txt = 'PAYSANDÚ 1215 APTO 101';
+            $txt = utf8_decode($txt);
+            $this->Cell(0, 4.4, $txt, 0, 0);
+            
+            $this->setX(75);
+            $txt = "PÁGINA ".$this->PageNo()."/{nb}";
+            $txt = utf8_decode($txt);
+            
+            $this->Cell(173.282-75, 4.4, $txt, 0, 1, 'R');
+            
+            $txt = 'TEL/FAX : 2902 7764';
+            $txt = utf8_decode($txt);
+            $this->Cell(0, 4.4, $txt, 0, 1);
+            
+            $txt = 'CEL : 099 27 41 81';
+            $txt = utf8_decode($txt);
+            $this->Cell(0, 4.4, $txt, 0, 1);
+            
+            //IMAGE
             $this->Image('images/fontanero.jpg', 173.282, 297-27.546, 21.302);
             
         }
@@ -16,6 +40,12 @@ class PDF extends FPDF{
 
 $pdf = new PDF('P', 'mm', 'A4');
 $pdf->AliasNbPages();
+$pdf->SetMargins(15.202, 6.088, 15.202);
+$pdf->SetAutoPageBreak(true, 6.088);
+$pdf->AddFont('Bodoni MT', 'B', 'bod_b.php');
+$pdf->AddFont('Arial', '', 'arial.php');
+$pdf->AddFont('Arial', 'B', 'arialbd.php');
+
 /*
   $hoy = date_create();
   $lci=21;
@@ -95,10 +125,7 @@ $x = (210-$width)/2;
 $pdf->Rect($x, $y, $width, $border, 'F');
 
 //TEXT
-$pdf->AddFont('Bodoni MT', 'B', 'bod_b.php');
 $pdf->SetFont('Bodoni MT', 'B', 16);
-$pdf->SetMargins(15.202, 6.088, 15.202);
-$pdf->SetAutoPageBreak(true, 6.088);
 $pdf->SetXY(0, 297-31.32);
 $txt = 'PAYSANDÚ 1215 APTO 101      TEL/FAX : 2902 7764      CEL : 099 27 41 81';
 $txt = utf8_decode($txt);
@@ -109,8 +136,8 @@ $txt = 'E-MAIL : marcoserpi@hotmail.com';
 $txt = utf8_decode($txt);
 $pdf->Cell(0, 0, $txt, 0, 1, 'C');
 
-$pdf->AddPage();
 
+$pdf->AddPage();
 
 $pdf->Output('test.pdf', 'I');
 ?>
