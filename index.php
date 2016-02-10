@@ -1,5 +1,4 @@
 <?php
-
 require "include/clases.php";
 require "include/draw.php";
 
@@ -67,7 +66,7 @@ class PDF extends PDF_Draw{
             $this->Cell(173.282-75, 4.4, $txt, 0, 1, 'R');
             
             //IMAGE
-            $this->Image('images/fontanero.jpg', 173.282, 297-27.546, 21.302);
+            $this->Image('images/pdf/fontanero.jpg', 173.282, 297-27.546, 21.302);
             
         }
     }
@@ -128,10 +127,10 @@ $height = 58.779;
 $width = 180.656;
 $pdf->SetFillColor(0, 0, 128);
 $pdf->Rect($x-$border, $y-$border, $width+2*$border, $height+2*$border, 'F');
-$pdf->Image('images/talmet.jpg', $x, $y, $width, $height);
+$pdf->Image('images/pdf/talmet.jpg', $x, $y, $width, $height);
 
 //FONTANERO
-$pdf->Image('images/fontanero.jpg', 53.734, 297-201.132, 97.852);
+$pdf->Image('images/pdf/fontanero.jpg', 53.734, 297-201.132, 97.852);
 
 //FERE
 $x = 17.141;
@@ -140,19 +139,19 @@ $height = 19.707;
 $width = 48.605;
 $pdf->SetFillColor(0);
 $pdf->Rect($x-$border, $y-$border, $width+2*$border, $height+2*$border, 'F');
-$pdf->Image('images/fere.jpg', $x, $y, $width, $height);
+$pdf->Image('images/pdf/fere.jpg', $x, $y, $width, $height);
 
 //CLIUS
 $x = 80.067;
 $pdf->SetFillColor(255, 0, 0);
 $pdf->Rect($x-$border, $y-$border, $width+2*$border, $height+2*$border, 'F');
-$pdf->Image('images/clius.jpg', $x, $y, $width, $height);
+$pdf->Image('images/pdf/clius.jpg', $x, $y, $width, $height);
 
 //METASUL
 $x = 141.027;
 $pdf->SetFillColor(0);
 $pdf->Rect($x-$border, $y-$border, $width+2*$border, $height+2*$border, 'F');
-$pdf->Image('images/metasul.jpg', $x, $y, $width, $height);
+$pdf->Image('images/pdf/metasul.jpg', $x, $y, $width, $height);
 
 //SEPARATOR
 $y = 297-35.541;
@@ -171,6 +170,10 @@ $pdf->Ln();
 $txt = 'E-MAIL : marcoserpi@hotmail.com';
 $txt = utf8_decode($txt);
 $pdf->Cell(0, 0, $txt, 0, 1, 'C');
+
+
+
+
 
 $pdf->AddPage();
 
