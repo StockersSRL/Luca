@@ -70,6 +70,30 @@ class PDF extends PDF_Draw{
             
         }
     }
+    
+    function ImageCenter($file, $x, $y, $maxw, $maxh){
+        $imgsize=  getimagesize($file);
+        $imgw=$imgsize[0]/$this->k;
+        $imgh=$imgsize[1]/$this->k;
+        
+
+        $imgratio=$imgh/$imgw;
+        $maxratio=$maxh/$maxw;
+        
+        if($imgratio < $maxratio){//IMAGE LANDSCAPE
+            $k=$maxw/$imgw;
+            $w=$maxw;
+            $h=$imgh*$k;
+            $y+=($maxh-$h)/2;
+        }else{//IMAGE PORTRAIT
+            $k=$maxh/$imgh;
+            $h=$maxh;
+            $w=$imgw*$k;
+            $x+=($maxw-$w)/2;
+        }
+        $this->Image($file, $x, $y, $w, $h);
+    }
+
 }
 
 $pdf = new PDF('P', 'mm', 'A4');
@@ -171,11 +195,37 @@ $txt = 'E-MAIL : marcoserpi@hotmail.com';
 $txt = utf8_decode($txt);
 $pdf->Cell(0, 0, $txt, 0, 1, 'C');
 
+$sql="SELECT articulo.id AS 'id_articulo', subarticulo.id AS 'id_subarticulo', categoria.id AS 'id_categoria', codigo, precio, stock, articulo.nombre AS 'nombre', descripcion, imgpath, categoria.nombre AS'nombre_categoria', distincion FROM subarticulo, articulo, categoria WHERE articulo.id = subarticulo.id_articulo AND id_categoria=categoria.id AND activo=1";
+$resultado=mysqli_query(bd::$con, $sql);
 
+    $i=0;
+    $border=0.896;
+    $w=59.865-2*$border;
+    $imgh=53.218;
+while($fila=mysqli_fetch_object($resultado)){
+    $categoria=$fila->nombre_categoria;
+    if($i%9==0){
+        $pdf->AddPage();
+        $x=15.202;
+        $y=36.617;
+    }elseif($i%3==0){
+        $x=15.202;
+        $y+=76.268;
+    }
+    $pdf->ImageCenter($fila->imgpath, $x+$border, $y+$border, $w, $imgh);
+    $codigo=$fila->codigo;
+    if($codigo!=null){
+        $txt=  utf8_decode("Código: ".$codigo);
+        $pdf->SetFont('Arial', 'B', 8);
+        $pdf->SetFillColor(255);
+        $stringw=$pdf->GetStringWidth($txt);
+        $pdf->setXY($x+$border+$w-$stringw, $y+$border+$imgh-3);
+        $pdf->Cell($stringw, 3, $txt, 0, 0, 'C', true);
+    }
 
-
-
-$pdf->AddPage();
+    $x+=59.865;
+    $i++;
+}
 
 $pdf->Output('test.pdf', 'I');
 ?>
