@@ -203,8 +203,9 @@ $resultado=mysqli_query(bd::$con, $sql);
     $w=59.865-2*$border;
     $imgh=53.218;
 while($fila=mysqli_fetch_object($resultado)){
+    
     $categoria=$fila->nombre_categoria;
-    if($i%9==0){
+    if($i%9==0){//SI CAMBIA DE CATEGORIA TAMBIEN
         $pdf->AddPage();
         $x=15.202;
         $y=36.617;
@@ -213,6 +214,8 @@ while($fila=mysqli_fetch_object($resultado)){
         $y+=76.268;
     }
     $pdf->ImageCenter($fila->imgpath, $x+$border, $y+$border, $w, $imgh);
+    
+    
     $codigo=$fila->codigo;
     if($codigo!=null){
         $txt=  utf8_decode("Código: ".$codigo);
@@ -222,7 +225,24 @@ while($fila=mysqli_fetch_object($resultado)){
         $pdf->setXY($x+$border+$w-$stringw, $y+$border+$imgh-3);
         $pdf->Cell($stringw, 3, $txt, 0, 0, 'C', true);
     }
-
+    
+    $cellh=3.6085;
+    if (strcasecmp($fila->distincion, "no")==0) {
+        $txt = $fila->nombre;
+    } else {
+        $txt = $fila->nombre . " " . $fila->distincion . " " . $fila->descripcion;
+    }
+    $txt=  utf8_decode($txt);
+    $pdf->SetFont('Arial', '', 10);
+    $pdf->SetXY($x+$border, $y+$border+$imgh);
+    $pdf->MultiCell($w, 3.6085, $txt, 0, 'C');
+    
+    $pdf->Ln();
+    $pdf->SetX($x);
+    $txt="\$U ".$fila->precio;
+    $pdf->SetFont('Arial', 'B', 12);
+    $pdf->Cell($w, 3.6085, $txt, 0, 0, 'C');
+    
     $x+=59.865;
     $i++;
 }
