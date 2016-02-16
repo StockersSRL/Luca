@@ -4,7 +4,7 @@ define('DB_NAME','sm');
 define('DB_USER','root'); 
 define('DB_PASS',''); 
 
-
+session_start(); 
 BD::connect();
 
 class bd{
@@ -21,15 +21,18 @@ class bd{
 
 class login{
 	public static function in($user, $pass){
-		$sql="SELECT * FROM usuario WHERE username = '".$user."'  AND pass = '".md5($pass)."'";
+		$sql="SELECT * FROM usuario WHERE username = '".$user."'  AND password = '".md5($pass)."'";
+                var_dump($sql);
 		$usuarios=mysqli_query(bd::$con, $sql);
-		if(mysqli_num_rows($usuarios) == 1){
+		if(mysqli_num_rows($usuarios) == TRUE){
 			$fila=mysqli_fetch_object($usuarios);
 			$_SESSION['user']=$fila->username;
 			$_SESSION['tipo']=$fila->tipo;
 			log::set("IniciÃ³ sesiÃ³n");
+                        var_dump($_SESSION);
 			header('location: index.php');
 		}
+        
 	}
 }
 

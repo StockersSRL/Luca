@@ -1,11 +1,10 @@
 <?php
 require "include/clases.php";
-
 if(isset($_SESSION['user']))
 	header('location: index.php');
 
 if(isset($_POST['login'])){
-	login::in($_POST['user'], $_POST['password']);
+	login::in($_POST['user'], $_POST['pass']);
 }
 ?>
 <html>
@@ -43,10 +42,10 @@ if(isset($_POST['login'])){
                     <input type="submit" value="Contactarse"/>
                     <p class="message">Ya está registrado? <a href="#">Ingresar</a></p>
                 </form>
-                <form class="login-form">
-                    <input type="text" placeholder="Usuario"/>
-                    <input type="password" placeholder="Contraseña"/>
-                    <input type="submit" value="Ingresar"/>
+                <form class="login-form" action="" method="post">
+                    <input type="text" placeholder="Usuario" name="user"/>
+                    <input type="password" placeholder="Contraseña" name="pass"/>
+                    <input type="submit" value="Ingresar" name="login"/>
                     <p class="message">Quieres usar StockManager? <a href="#">Contactarse</a></p>
                 </form>
                 <div id="error">Error</div>
