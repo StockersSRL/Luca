@@ -1,0 +1,153 @@
+#formito {
+  border-collapse: separate;
+  border-spacing: 50px 0; }
+
+form textarea {
+  resize: none;
+  height: 105px;
+  width: 250px; }
+
+form td {
+  padding: 10px 0px 10px 25px; }
+
+#wrapper {
+  padding-top: 160px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+
+#celda-mala-1 {
+  position: relative;
+  top: 6px; }
+
+.panel-descripcion {
+  height: 20%; }
+
+
+#cat-tit {
+    position: relative;
+    bottom: 5px;
+}
+
+<<<<<<< HEAD
+/*Sugerencia de busqueda*/
+
+#busquedaArt input[type=text]{
+    display: inline-block;
+    text-indent: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 625px){
+    #busquedaArt {
+        margin-bottom: 20px;
+        border: 1px solid #337ab7;
+        width: 90%;
+        padding-left: 5px;
+        min-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    
+}
+
+@media screen and (max-width: 625px){
+    #busquedaArt {
+        margin-bottom: 20px;
+        border: 1px solid black;
+        width: 90%;
+        padding-left: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+#busquedaArt > button{
+    display: block;
+    width: 90%;
+    margin: 10px auto 15px auto;
+    }
+
+
+#s-nombre {
+    width: 85%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#suggestName {
+    position: absolute;
+    width: 63.8%;
+    background-color: white;
+    z-index: 1010;
+    
+    border: 1px solid #ccc;
+    border-top-color: #d9d9d9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    
+}
+
+#suggestName >ul{
+    list-style: none;
+    line-height: 25px;
+    margin: 0px;
+}
+
+#suggestName li{
+    border: none;
+    overflow: hidden;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+#suggestName li:hover{
+    background-color: gainsboro;
+}
+
+@media(max-width: 850px){
+    #col-desc{
+        clear: both;
+    }
+    
+    #col-cat{
+        width: 100%;
+    }
+}
+
+.chosen-container .chosen-container-multi .chosen-with-drop .chosen-container-active{
+    overflow: auto !important;
+}
+
+    #s-tags {
+        width: 85%;
+        margin-bottom: 5px;
+    }
+
+    #s-codigo {
+        width: 85%;
+        margin-bottom: 5px;
+    }
+
+@media screen and (min-width: 550px){
+    #s-tags {
+        width: 59.6%;
+        min-width: 170px;
+        margin-bottom: 5px;
+    }
+
+    #s-codigo {
+        width: 25%;
+        min-width: 170px;
+
+    }
+}
+
+#fomularios {
+    margin-left: 70px;
+    display: block;
+}
+=======
+>>>>>>> 17ea5c8d5f5ad18c7ded7edd6cca77693ddb5294

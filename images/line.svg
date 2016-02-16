@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="345.897mm" height="68.6254mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 6729 1335"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#2C9AC1}
+    .fil3 {fill:#7FBA00}
+    .fil4 {fill:#F35F36}
+    .fil0 {fill:#FEFEFE}
+    .fil2 {fill:#FFB901}
+    .fil6 {fill:#404040;fill-rule:nonzero}
+    .fil5 {fill:#545557;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M0 1335c19,-13 41,-28 60,-42 17,-13 48,-31 61,-44l-121 0 0 86z"/>
+  <g id="_1842734837024">
+   <path class="fil1" d="M1118 1141c-6,220 -29,187 299,187 189,0 377,1 566,1 185,0 380,-3 565,2 185,5 380,2 566,2l842 2c135,0 158,-6 158,-105 -1,-124 -16,-107 -158,-107 -740,0 -1490,-3 -2232,-1 -65,5 -131,8 -198,10l-408 9z"/>
+   <polygon class="fil2" points="1743,241 1492,242 1489,7 1057,7 1055,989 2184,989 2185,1 1742,0 "/>
+   <polygon class="fil3" points="2880,381 2676,382 2674,191 2322,190 2320,989 3238,989 3239,186 2879,185 "/>
+   <polygon class="fil4" points="3835,487 3666,487 3665,330 3374,329 3372,989 4131,989 4132,326 3834,325 "/>
+  </g>
+  <path class="fil5" d="M4853 1137c-153,0 -232,-62 -241,-186l-232 0c7,255 163,384 473,384 296,0 451,-113 465,-342 6,-148 -56,-245 -186,-289 -98,-35 -191,-61 -279,-81 -153,-35 -227,-88 -227,-162 5,-89 67,-136 191,-138 101,0 172,33 211,100 23,45 57,69 107,69l134 0c-13,-243 -156,-363 -431,-363 -290,-2 -436,119 -441,365 0,155 114,261 342,320 85,22 164,43 233,63 72,21 106,59 106,116 2,96 -72,144 -225,144l0 0z"/>
+  <path class="fil6" d="M5556 291l0 1044 225 0 0 -945 239 945 245 0 239 -945 0 945 225 0 0 -1170 -356 0 -229 891 -235 -891 -233 0c-67,0 -120,59 -120,126z"/>
+ </g>
+</svg>

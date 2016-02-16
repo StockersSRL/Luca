@@ -195,7 +195,7 @@ $txt = 'E-MAIL : marcoserpi@hotmail.com';
 $txt = utf8_decode($txt);
 $pdf->Cell(0, 0, $txt, 0, 1, 'C');
 
-$sql="SELECT articulo.id AS 'id_articulo', subarticulo.id AS 'id_subarticulo', categoria.id AS 'id_categoria', codigo, precio, stock, articulo.nombre AS 'nombre', descripcion, imgpath, categoria.nombre AS'nombre_categoria', distincion FROM subarticulo, articulo, categoria WHERE articulo.id = subarticulo.id_articulo AND id_categoria=categoria.id AND activo=1";
+$sql="SELECT articulo.id AS 'id_articulo', subarticulo.id AS 'id_subarticulo', categoria.id AS 'id_categoria', codigo, precio, stock, articulo.nombre AS 'nombre', descripcion, imgpath, categoria.nombre AS'nombre_categoria', distincion FROM subarticulo, articulo, categoria WHERE articulo.id = subarticulo.id_articulo AND id_categoria=categoria.id AND activo=1 ORDER BY id_categoria, id_articulo";
 $resultado=mysqli_query(bd::$con, $sql);
 
     $i=0;
@@ -205,11 +205,14 @@ $resultado=mysqli_query(bd::$con, $sql);
 while($fila=mysqli_fetch_object($resultado)){
     
     $categoria=$fila->nombre_categoria;
-    if($i%9==0){//SI CAMBIA DE CATEGORIA TAMBIEN
+    $idcat=$fila->id_categoria;
+    if($i%9==0 || $idcat!=$idcat2){//SI CAMBIA DE CATEGORIA TAMBIEN
+        $idcat2=$idcat;
         $pdf->AddPage();
         $x=15.202;
         $y=36.617;
-    }elseif($i%3==0){
+    }
+    if($i%3==0 && $i%9!=0){
         $x=15.202;
         $y+=76.268;
     }
