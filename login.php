@@ -1,5 +1,12 @@
 <?php
+require "include/clases.php";
 
+if(isset($_SESSION['user']))
+	header('location: index.php');
+
+if(isset($_POST['login'])){
+	login::in($_POST['user'], $_POST['password']);
+}
 ?>
 <html>
     <head>
