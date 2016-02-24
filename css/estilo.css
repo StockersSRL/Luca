@@ -2,11 +2,6 @@
   border-collapse: separate;
   border-spacing: 50px 0; }
 
-form textarea {
-  resize: none;
-  height: 105px;
-  width: 250px; }
-
 form td {
   padding: 10px 0px 10px 25px; }
 
@@ -16,9 +11,7 @@ form td {
   margin-left: auto;
   margin-right: auto; }
 
-#celda-mala-1 {
-  position: relative;
-  top: 6px; }
+
 
 .panel-descripcion {
   height: 20%; }
@@ -29,7 +22,6 @@ form td {
     bottom: 5px;
 }
 
-<<<<<<< HEAD
 /*Sugerencia de busqueda*/
 
 #busquedaArt input[type=text]{
@@ -145,9 +137,41 @@ form td {
     }
 }
 
-#fomularios {
-    margin-left: 70px;
-    display: block;
+
+/*AJAX SUGGESTION */
+
+.suggest-box {
+    position: absolute;
+    background-color: white;
+    z-index: 1010;
+    border: 1px solid #ccc;
+    border-top-color: #d9d9d9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    
 }
-=======
->>>>>>> 17ea5c8d5f5ad18c7ded7edd6cca77693ddb5294
+
+.suggest-box >ul{
+    list-style: none;
+    line-height: 25px;
+    margin: 0px;
+}
+
+.suggest-box li{
+    border: none;
+    overflow: hidden;
+    padding: 0 5px;
+    cursor: pointer;
+    color: #5a5a5a !important;
+}
+
+.suggest-box li:hover{
+    background-color: gainsboro;
+}
+
+.suggest-col-2{
+    width: 92%;
+}
+
+.select{
+    background-color: gainsboro;
+}

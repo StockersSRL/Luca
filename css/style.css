@@ -165,6 +165,7 @@ li img {
 li {
   color: black; }
 
+
 #menu a li:hover, #menu a li.active {
   -webkit-transition: color, 125ms, ease;
   cursor: pointer; }
