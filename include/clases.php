@@ -107,18 +107,45 @@ class log{
 }
 
 class articulo{
+    static function toHtml($id){
+        if($json=json_decode(articulo::get($id), true)){
+            $i=0;
+            $letra="a";
+            $html='<div id="datos-desc">';
+            $img='<div id="mini-imgs">';
+            foreach($json["subarticulos"] as $subarticulo){
+                $html=$html.'<div class="subGran" id="'.$letra.'">';
+                $html=$html.'<h2 class="sep">'.($subarticulo["codigo"] ? "#".$subarticulo["codigo"]." " : "").(strcasecmp($subarticulo["distincion"], "no")==0 ? $json["nombre"]." ".$subarticulo["descripcion"] : $json["nombre"]." ".$subarticulo["distincion"]." ".$subarticulo["descripcion"]).'</h2>';
+                $html=$html.'<p  class="sep">by <a href="#">'.$json["proveedor"].'</a><hr></p>';
+                $html=$html.'<h3 class="sep" id="precio">Precio: <strong>$U'.$subarticulo["precio"].'</strong></h3>';
+                $html=$html.'<h4 class="sep">Stock: <strong style="color:'.($subarticulo["stock"]>0 ? 'green' : 'red').';">'.$subarticulo["stock"].'</strong></h4>';
+                $html=$html.'<h4 class="sep"><strong style="color:'.($subarticulo["activo"] ? 'green' : 'red').';">'.($subarticulo["activo"] ? 'ACTIVO' : 'PASIVO').'</strong></h4>';
+                $html=$html.'<p class="sep">'.$json["observaciones"].'</p>';
+                $html=$html.'</div>';
+                
+                $img=$img.'<div name="'.$i.'" class="subart"><img src="'.$subarticulo["imgpath"].'"></div>';
+                    $letra=chr(ord($letra)+1);
+                    $i++;
+            }
+            $img=$img.'</div>';
+            $html=$html.$img.'</div>';
+            return $html;
+        }else return null;
+    }
     static function get($id){
         $sql="SELECT a.id, (SELECT razon_social FROM cliente WHERE id=a.proveedor) AS proveedor, a.nombre, a.observaciones FROM articulo as a WHERE a.id=".$id;
         $resultado=mysqli_query(bd::$con, $sql);
         if($articulo=bd::cast_query_results($resultado)[0]){
-            $sql="SELECT *, (SELECT nombre FROM categoria WHERE id=s.id_categoria) AS categoria, (SELECT GROUP_CONCAT(`tag`) FROM `subarticulo-tag` WHERE `id_subarticulo` = s.id GROUP BY `id_subarticulo`) AS tags FROM subarticulo AS s WHERE s.id_articulo=".$id;
+            $sql="SELECT *, (SELECT nombre FROM categoria WHERE id=s.id_categoria) AS categoria, (SELECT GROUP_CONCAT(`tag`) FROM `subarticulo_tag` WHERE `id_subarticulo` = s.id GROUP BY `id_subarticulo`) AS tags FROM subarticulo AS s WHERE s.id_articulo=".$id;
             $resultado2=mysqli_query(bd::$con, $sql);
             if($subarticulos=bd::cast_query_results($resultado2)){
                 foreach($subarticulos as $subarticulo){
-                    
+                    $sql="SELECT id_categoria AS id, (SELECT nombre FROM categoria WHERE id=sc.id_categoria) AS nombre FROM subarticulo_categoria AS sc WHERE id_subarticulo=".$subarticulo["id"];
+                    $resultado3=mysqli_query(bd::$con, $sql);
+                    $subarticulo["categorias"]=bd::cast_query_results($resultado3);
+                    $articulo["subarticulos"][]=$subarticulo;
                 }
-                $articulo["subarticulos"]=$subarticulos;
-                return $articulo;
+                return json_encode($articulo);
             }else $articulo=null;
         }else $articulo=null;
         return $articulo;

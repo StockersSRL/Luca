@@ -7,7 +7,7 @@ session_start();
 if(!isset($_SESSION['user']))
     header('location: login.php');
 require 'include/clases.php';
-if(true){
+if(false){
 if(!(isset($_GET["id"]) && $articulo=articulo::get($_GET["id"])))
         exit();//ARTICULO NO EXISTE
 var_dump($articulo);
@@ -46,58 +46,13 @@ include 'header.php';
     <div id="wrapper">
         <div id="edit"><a href="#"><img id="ed" src="images/edit.svg" width="100px" height="37px" style="float: right; display:block; margin: 10px;"></a></div>
         <div id="img-desc" style="float:left;width:40%;">
-            <img id="grande" src="images/canilla.png" style="float:left;width:100%;margin-right: 30px;">
+            <img id="grande" src="images/canilla2.jpg" style="float:left;width:100%;margin-right: 30px;">
         </div>
-        
-        <div id="datos-desc">
-            <div class="subGran" id="a">
-            <h2 class="sep">#w12312312- Canilla super cheta cromada y yo que se</h2>
-            <p  class="sep">by <a href="#">Proveedor</a><hr></p>
-            <h3 class="sep" id="precio">Precio: <strong>$123.55</strong></h3>
-            <h4 class="sep">Stock: <strong style="color:green;">IN STOCK</strong></h4>
-            <h4 class="sep"><strong style="color:green;">ACTIVO</strong></h4>
-            <p class="sep">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel nunc in tellus tristique rhoncus. Fusce ut ipsum ut metus eleifend ultrices quis non urna. Integer at diam nec ante posuere rhoncus sit amet ultricies tellus. Integer posuere augue ac arcu convallis laoreet. Suspendisse ex massa, lacinia quis condimentum sed, cursus ac lacus. Integer lorem justo, cursus quis dapibus laoreet, ornare imperdiet odio. Cras et nisi sit amet nisi euismod tincidunt vitae eu nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent vel est fringilla, pretium risus eu, facilisis lectus. </p>
-            </div>
-                    <div class="subGran" id="b">
-            <h2 class="sep">#w12312312- Canilla super cheta cromada y yo que se</h2>
-            <p  class="sep">by <a href="#">Proveedor</a><hr></p>
-            <h3 class="sep" id="precio">Precio: <strong>$124.55</strong></h3>
-            <h4 class="sep">Stock: <strong style="color:green;">IN STOCK</strong></h4>
-            <h4 class="sep"><strong style="color:green;">ACTIVO</strong></h4>
-            <p class="sep">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel nunc in tellus tristique rhoncus. Fusce ut ipsum ut metus eleifend ultrices quis non urna. Integer at diam nec ante posuere rhoncus sit amet ultricies tellus. Integer posuere augue ac arcu convallis laoreet. Suspendisse ex massa, lacinia quis condimentum sed, cursus ac lacus. Integer lorem justo, cursus quis dapibus laoreet, ornare imperdiet odio. Cras et nisi sit amet nisi euismod tincidunt vitae eu nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent vel est fringilla, pretium risus eu, facilisis lectus. </p>
-            </div>
-                <div class="subGran" id="c">
-            <h2 class="sep">#w12312312- Canilla super cheta cromada y yo que se</h2>
-            <p  class="sep">by <a href="#">Proveedor</a><hr></p>
-            <h3 class="sep" id="precio">Precio: <strong>$125.55</strong></h3>
-            <h4 class="sep">Stock: <strong style="color:green;">IN STOCK</strong></h4>
-            <h4 class="sep"><strong style="color:green;">ACTIVO</strong></h4>
-            <p class="sep">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel nunc in tellus tristique rhoncus. Fusce ut ipsum ut metus eleifend ultrices quis non urna. Integer at diam nec ante posuere rhoncus sit amet ultricies tellus. Integer posuere augue ac arcu convallis laoreet. Suspendisse ex massa, lacinia quis condimentum sed, cursus ac lacus. Integer lorem justo, cursus quis dapibus laoreet, ornare imperdiet odio. Cras et nisi sit amet nisi euismod tincidunt vitae eu nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent vel est fringilla, pretium risus eu, facilisis lectus. </p>
-            </div>
-                <div class="subGran" id="d">
-            <h2 class="sep">#w12312312- Canilla super cheta cromada y yo que se</h2>
-            <p  class="sep">by <a href="#">Proveedor</a><hr></p>
-            <h3 class="sep" id="precio">Precio: <strong>$126.55</strong></h3>
-            <h4 class="sep">Stock: <strong style="color:green;">IN STOCK</strong></h4>
-            <h4 class="sep"><strong style="color:green;">ACTIVO</strong></h4>
-            <p class="sep">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel nunc in tellus tristique rhoncus. Fusce ut ipsum ut metus eleifend ultrices quis non urna. Integer at diam nec ante posuere rhoncus sit amet ultricies tellus. Integer posuere augue ac arcu convallis laoreet. Suspendisse ex massa, lacinia quis condimentum sed, cursus ac lacus. Integer lorem justo, cursus quis dapibus laoreet, ornare imperdiet odio. Cras et nisi sit amet nisi euismod tincidunt vitae eu nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent vel est fringilla, pretium risus eu, facilisis lectus. </p>
-            </div>
-                <div class="subGran" id="e">
-            <h2 class="sep">#w12312312- Canilla super cheta cromada y yo que se</h2>
-            <p  class="sep">by <a href="#">Proveedor</a><hr></p>
-            <h3 class="sep" id="precio">Precio: <strong>$127.55</strong></h3>
-            <h4 class="sep">Stock: <strong style="color:green;">IN STOCK</strong></h4>
-            <h4 class="sep"><strong style="color:green;">ACTIVO</strong></h4>
-            <p class="sep">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel nunc in tellus tristique rhoncus. Fusce ut ipsum ut metus eleifend ultrices quis non urna. Integer at diam nec ante posuere rhoncus sit amet ultricies tellus. Integer posuere augue ac arcu convallis laoreet. Suspendisse ex massa, lacinia quis condimentum sed, cursus ac lacus. Integer lorem justo, cursus quis dapibus laoreet, ornare imperdiet odio. Cras et nisi sit amet nisi euismod tincidunt vitae eu nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent vel est fringilla, pretium risus eu, facilisis lectus. </p>
-            </div>
-            <div id="mini-imgs">
-                <div name="0" class="subart"><img src="images/canilla1.jpg"></div>
-                <div name="1" class="subart"><img src="images/canilla2.jpg"></div>
-                <div name="2" class="subart"><img src="images/canilla3.jpg"></div>
-                <div name="3" class="subart"><img src="images/canilla1.jpg"></div>
-                                <div name="4" class="subart"><img src="images/canilla1.jpg"></div>
-            </div>
-        </div>
+<?php
+if(!(isset($_GET["id"]) && $articulo=articulo::toHtml($_GET["id"])))
+        exit();//ARTICULO NO EXISTE
+echo $articulo;
+?>
     </div>    
 <script>
 elems.forEach(function(html) {
