@@ -1,7 +1,7 @@
 <?php
 include_once "clases.php";
-session_start(); 
-session_destroy();
+session_start();
 log::set("Cerró sesión");
+session_destroy();
 header('location: ../login.php'); 
 ?> 

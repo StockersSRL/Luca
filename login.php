@@ -1,8 +1,9 @@
 <?php
-require "include/clases.php";
+session_start(); 
 if(isset($_SESSION['user']))
 	header('location: index.php');
 
+require "include/clases.php";
 if(isset($_POST['login'])){
 	login::in($_POST['user'], $_POST['pass']);
 }
@@ -48,7 +49,7 @@ if(isset($_POST['login'])){
                     <input type="submit" value="Ingresar" name="login"/>
                     <p class="message">Quieres usar StockManager? <a href="#">Contactarse</a></p>
                 </form>
-                <div id="error">Error</div>
+                <div id="error"><?php echo msg::get();?></div>
             </div>
         </div></center>
         <div id="marketing"><strong>Control inteligente de stock.</strong></div>

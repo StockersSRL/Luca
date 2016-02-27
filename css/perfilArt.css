@@ -1,0 +1,41 @@
+#mini-imgs{
+    float: right;
+    width: 60%;
+    height: 100px;
+}
+.subart img{
+    width: 80px;
+    height: 50px;
+}
+
+.subart{
+    float: left;
+    padding: 10px;
+    border: 1px solid lightgray;
+    max-height: 100px;
+    margin: 7px;
+}
+
+.sep{
+    margin-left: 30px;
+}
+
+#grande{
+    position: relative;
+    right: 10px;
+}
+#ed:hover{
+    content: url("../images/editA.svg");
+}
+
+@media only screen and (max-width: 944px) {
+    #mini-imgs{
+        width: 90%;
+        margin-left: 5%;
+        
+    }
+    .subart img{
+    width: 100px;
+    height: 70px;
+}
+}

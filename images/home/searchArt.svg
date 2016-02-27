@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="41.8042mm" height="42.1349mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1399 1410"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str2 {stroke:#FEFEFE;stroke-width:25.0658}
+    .str3 {stroke:black;stroke-width:25.0658}
+    .str0 {stroke:#FEFEFE;stroke-width:50.1919}
+    .str1 {stroke:#FEFEFE;stroke-width:3.34612;stroke-linecap:round;stroke-linejoin:round}
+    .fil0 {fill:none}
+    .fil4 {fill:none;fill-rule:nonzero}
+    .fil1 {fill:black}
+    .fil3 {fill:black;fill-rule:nonzero}
+    .fil2 {fill:white;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" width="1399" height="1410"/>
+  <path class="fil1" d="M0 528l0 627c8,9 12,45 56,59 37,11 67,-5 85,-26 37,-43 10,-148 20,-210l270 0c7,6 16,24 22,33 6,9 19,24 27,32 16,18 45,39 65,51 156,88 350,12 410,-151 6,-15 8,-32 14,-45 25,-2 112,-3 129,5 29,14 23,75 21,114 -51,14 -40,43 -40,97 0,61 15,64 74,64l207 0c27,-3 28,-15 39,-30l0 -99c-17,-26 -8,-21 -40,-32 -4,-57 0,-128 0,-187 0,-84 16,-132 -54,-132 -124,1 -249,1 -373,0 -16,-28 -46,-60 -68,-77 -26,-21 -57,-37 -94,-50 4,-5 45,-34 23,-78 -18,-37 -49,-33 -74,-35l1 -79c69,-8 181,11 214,-12 32,-22 35,-73 -2,-98 -17,-12 -39,-10 -63,-10 -46,0 -106,3 -150,-1 -5,-24 -11,-39 -40,-39 -27,0 -36,15 -40,40 -49,0 -100,0 -150,0 -25,0 -45,-2 -64,11 -34,24 -33,75 1,98 19,12 38,10 63,10 50,0 100,0 151,0l-1 81c-39,0 -63,8 -75,37 -18,48 23,71 29,78 -14,7 -29,12 -44,21 -28,15 -51,34 -73,56 -9,10 -10,8 -27,8l-161 0c-22,0 -114,2 -128,-2 0,-35 0,-71 0,-106 0,-37 -12,-62 -33,-76 -23,-17 -54,-22 -83,-8 -37,19 -36,43 -44,61z"/>
+  <ellipse class="fil1 str0" cx="288" cy="1125" rx="262" ry="247"/>
+  <path class="fil2 str1" d="M299 1180l27 -17c4,-2 13,-2 14,-1l74 107c1,1 1,3 -2,5l-39 26c-2,1 -5,1 -6,0l-74 -108c0,-2 3,-10 6,-12l0 0z"/>
+  <ellipse class="fil2 str2" transform="matrix(0.284185 0.0411192 -0.0411192 0.284185 253.004 1067.47)" rx="382" ry="375"/>
+  <ellipse class="fil3 str3" cx="253" cy="1068" rx="78" ry="76"/>
+  <rect class="fil2 str2" transform="matrix(0.165419 -0.0937531 0.0937531 0.165419 295.204 1168.42)" width="150.964" height="74.5516"/>
+  <path class="fil4 str2" d="M300 1182c14,-1 24,-7 30,-16"/>
+  <path class="fil2" d="M205 1023c-8,7 -19,19 -19,43 0,23 14,50 19,42 5,-7 -4,-21 -1,-45 3,-24 8,-46 1,-40l0 0z"/>
+ </g>
+</svg>

@@ -134,7 +134,7 @@
 /*ERROR*/
 #error{
     font-family: "Roboto", sans-serif;
-    color:red; position: relative; top: 20px; display: none;
+    color:red; position: relative; top: 20px; display: block;
 }
 /*MARKETING*/
 #marketing{

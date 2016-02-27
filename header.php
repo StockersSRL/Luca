@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+@session_start(); 
 if(!isset($_SESSION['user']))
     header('location: login.php');
 ?>
@@ -20,7 +20,7 @@ if(!isset($_SESSION['user']))
        <div id="nombre" style="z-index: 8; margin-left: 35px; position: relative; top:-25px; width:200px;">
              <table id="client" cellspacing="10px" cellpadding="5px">
                   <tr>
-                      <td style="border-left: solid 3px #545557; padding: 5px; border-bottom: solid 3px #545557"><strong> <?php echo $_SESSION['user'].", ".$_SESSION['tipo'] ?> </strong></td>
+                      <td style="border-left: solid 3px #545557; padding: 5px; border-bottom: solid 3px #545557"><strong> <?php echo "[".$_SESSION['tipo']."] ".$_SESSION['apellido'].", ".$_SESSION['nombre'];?> </strong></td>
                   </tr>
                   <tr>
                       <td style="border-left: solid 3px #545557; padding: 5px;border-top: solid 3px #545557"><strong>Talmet</strong></td>

@@ -165,7 +165,6 @@ li img {
 li {
   color: black; }
 
-
 #menu a li:hover, #menu a li.active {
   -webkit-transition: color, 125ms, ease;
   cursor: pointer; }
@@ -419,7 +418,8 @@ li {
     display: none; }
 
   #1, #2, #3, #4, #5, #6 {
-    height: 3; }
+    height: 3;
+    background-color: white; }
 
   .bu {
     width: 100px; } }
@@ -463,6 +463,13 @@ li {
 
 #nav-toggle.active span:after {
   transform: rotate(-45deg); }
+
+.sep {
+  margin: 10px 0px; }
+
+#volando {
+  position: relative;
+  bottom: 20px; }
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width: 321px) and (orientation: landscape) {

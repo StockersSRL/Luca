@@ -1,9 +1,18 @@
 <?php
+session_start(); 
+if(!isset($_SESSION['user']))
+    header('location: login.php');
 
+require_once 'include/clases.php';
+
+if(isset($_POST["altausuario"])){
+	if ($_SESSION['tipo']=='ADM')
+		user::add($_POST["nombre"], $_POST["apellido"], $_POST["email"], $_POST["username"],$_POST["pass1"],$_POST["pass2"],@$_POST["adm"]);
+        var_dump(msg::get());
+}
 ?>
 <html>
 <head>
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script style="color: rgb(0, 0, 0);" src="js/jquery-1.11.1.min.js"></script>
 <!---<script src="https://code.jquery.com/jquery-1.10.2.js"></script>--->
@@ -33,17 +42,17 @@ require("header.php");
     <div id="wrapper">
         <h1>Alta de Usuario</h1>
   
-          <form onsubmit="return false">
+          <form method="POST">
           <div class="col-3">
             <label>
               Nombre
-              <input placeholder="Nombre completo" id="nameUsr" name="name" tabindex="1">
+              <input placeholder="Nombre" id="nameUsr" name="nombre" tabindex="1">
             </label>
           </div>
           <div class="col-3">
             <label>
               Apellido
-              <input placeholder="Apellido" id="phone" name="phone" tabindex="2">
+              <input placeholder="Apellido" id="phone" name="apellido" tabindex="2">
             </label>
           </div>
           <div class="col-3">
@@ -55,26 +64,26 @@ require("header.php");
           <div class="col-3">
             <label>
               Usuario
-                <input placeholder="Nombre de usuario" id="user" name="user" tabindex="4">
+                <input placeholder="Nombre de usuario" id="user" name="username" tabindex="4">
             </label>
           </div>
 
           <div class="col-3">
             <label>
               Contraseña
-              <input type="password" placeholder="••••••••" id="pass" name="pass" tabindex="5">
+              <input type="password" placeholder="••••••••" id="pass" name="pass1" tabindex="5">
             </label>
           </div>
               <div class="col-3">
             <label>
               Reingresa tu contraseña
-              <input type="password" placeholder="••••••••" id="rePass" name="rePass" tabindex="5">
+              <input type="password" placeholder="••••••••" id="rePass" name="pass2" tabindex="5">
             </label>
           </div>
               
           <div class="col-2">
             <label>Administrador</label>
-            <center style="position:relative; margin-bottom:8px;"><input class="js-switch" type="checkbox"></center>
+            <center style="position:relative; margin-bottom:8px;"><input class="js-switch" type="checkbox" name="adm"></center>
           </div>
           <div class="col-2">
             <label>Acepto los términos y condiciones</label>
@@ -82,7 +91,7 @@ require("header.php");
           </div>
 
           <div class="col-submit">
-            <button class="submitbtn">Darme de alta</button>
+            <input type="submit" name="altausuario" class="submitbtn">Darme de alta</input>
           </div>
 
           </form>
