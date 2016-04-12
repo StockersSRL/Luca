@@ -1,7 +1,7 @@
 <?php
 session_start(); 
 if(isset($_SESSION['user']))
-	header('location: index.php');
+    header('location: index.php');
 
 require "include/clases.php";
 if(isset($_POST['login'])){
@@ -10,7 +10,6 @@ if(isset($_POST['login'])){
 ?>
 <html>
     <head>
-
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width">
     <script src="js/jquery-1.11.1.min.js"></script>

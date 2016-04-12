@@ -187,11 +187,11 @@ li {
   display: block;
   position: fixed;
   opacity: 0.98;
-  width: 60px;
+  width: 120px;
   z-index: 98;
   margin-right: 80px;
   float: right;
-  right: 15;
+  right: 15px;
   cursor: pointer;
   margin-top: 85px;
   font-size: 12; }
@@ -221,7 +221,7 @@ li {
   margin-top: 5px; }
 
 .cm {
-  width: 100px;
+  width: 120px;
   cursor: pointer; }
 
 #con {
@@ -247,7 +247,7 @@ li {
   font-size: 16px;
   alignment-adjust: central;
   border-bottom: 3px solid gray;
-  width: 120; }
+  width: 120px; }
 
 .cm:hover {
   background-color: #C0C0C0;

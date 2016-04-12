@@ -36,7 +36,7 @@ if(isset($_POST["altausuario"])){
   background-size: cover;">
 
 <?php
-require("header.php");
+require("include/header.php");
 ?>
     
     <div id="wrapper">
@@ -91,7 +91,7 @@ require("header.php");
           </div>
 
           <div class="col-submit">
-            <input type="submit" name="altausuario" class="submitbtn">Darme de alta</input>
+            <button type="submit" name="altausuario" class="submitbtn">Darme de alta</button>
           </div>
 
           </form>

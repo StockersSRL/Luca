@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW X7 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="41.8542mm" height="42.3665mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="41.8542mm" height="42.351mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
 viewBox="0 0 1390 1407"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
@@ -18,7 +18,7 @@ viewBox="0 0 1390 1407"
   <metadata id="CorelCorpID_0Corel-Layer"/>
   <rect class="fil0" x="2" width="1389" height="1400"/>
   <path class="fil1" d="M880 780c9,-49 -15,-50 52,-50l0 44 142 33 -34 77 -107 -22 -1 92c63,25 146,50 147,131 2,86 -72,117 -148,123l-1 68 -48 0 -4 -66c-60,-2 -89,-12 -142,-27l1 -88c50,17 86,31 144,37l2 -101c-190,-49 -206,-226 -3,-251zm-365 -219l618 0 1 78 -3 28 -615 -1 -1 -105zm0 -168l618 0 -2 106 -590 0 -26 -3 0 -103zm-177 -170l795 0 0 106 -795 0 0 -106zm-118 1051l3 27 974 0 6 -27 0 -1152 -981 0 -2 1152z"/>
-  <path class="fil2" d="M222 122l981 0 0 1152 -6 27 -974 0 -3 -27 2 -1152zm-95 1220c11,90 174,61 255,61 203,0 407,0 611,0 68,0 244,16 284,-23 35,-33 19,-243 19,-310l0 -666c0,-437 53,-393 -255,-393 -203,0 -407,0 -611,0 -68,0 -244,-16 -284,22 -36,33 -19,243 -19,311l0 998z"/>
+  <path class="fil2" d="M222 122l981 0 0 1152 -6 27 -974 0 -3 -27 2 -1152zm-95 1220c65,16 189,39 255,61 203,0 407,0 611,0 68,0 244,16 284,-23 35,-33 19,-243 19,-310l0 -666c0,-437 53,-393 -255,-393 -203,0 -407,0 -611,0 -68,0 -244,-16 -284,22 -36,33 -19,243 -19,311l0 998z"/>
   <path class="fil2" d="M932 1129l-2 -76 43 21c1,43 -5,47 -41,55zm-90 -241c14,-19 12,-19 41,-25l0 71c-26,-10 -38,-14 -41,-46zm38 -108c-203,25 -187,202 3,251l-2 101c-58,-6 -94,-20 -144,-37l-1 88c53,15 82,25 142,27l4 66 48 0 1 -68c76,-6 150,-37 148,-123 -1,-81 -84,-106 -147,-131l1 -92 107 22 34 -77 -142 -33 0 -44c-67,0 -43,1 -52,50z"/>
   <polygon class="fil2" points="338,329 1133,329 1133,223 338,223 "/>
   <polygon class="fil2" points="515,496 541,499 1131,499 1133,393 515,393 "/>

@@ -27,7 +27,26 @@
 #ed:hover{
     content: url("../images/editA.svg");
 }
-
+.tag{
+    padding: 6px;
+    background: lightgray;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+#categorias.sep{
+    margin-top:20px;
+}
+#categorias.sep span{
+   background-color: lightskyblue;
+}
+.innerPrice{
+    position: relative;
+    bottom: 25px;
+    margin-left: 10px;
+}
+.orangered{
+    color: orangered;
+}
 @media only screen and (max-width: 944px) {
     #mini-imgs{
         width: 90%;

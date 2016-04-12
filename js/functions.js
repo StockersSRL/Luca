@@ -7,7 +7,7 @@ $(document).ready(function(){
     
     function bug(){
         var scroll = $(window).scrollTop();
-            if(scroll < 30){ 
+            if(scroll < 120){ 
                 $('#logo2').hide();
                 $('#b2').hide();
                 $('#scrollup').hide();

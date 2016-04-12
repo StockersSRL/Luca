@@ -1,0 +1,314 @@
+@import "forms"
+#formito 
+  border-collapse: separate
+  border-spacing: 50px 0
+
+
+form td 
+  padding: 10px 0px 10px 25px
+
+
+#wrapper 
+  padding-top: 160px
+  width: 90%
+  margin-left: auto
+  margin-right: auto
+
+
+.panel-descripcion 
+  height: 20%
+
+
+#cat-tit 
+  position: relative
+  bottom: 5px
+
+
+/*Sugerencia de busqueda*/
+
+#busquedaArt input[type=text] 
+  display: inline-block
+  text-indent: 5px
+  margin-left: auto
+  margin-right: auto
+
+
+@media screen and (min-width: 625px) 
+  #busquedaArt 
+    margin-bottom: 20px
+    border: 1px solid #337ab7
+    width: 90%
+    padding-left: 5px
+    min-width: 400px
+    margin-left: auto
+    margin-right: auto
+  
+
+
+
+@media screen and (max-width: 625px) 
+  #busquedaArt 
+    margin-bottom: 20px
+    border: 1px solid black
+    width: 90%
+    padding-left: 5px
+    margin-left: auto
+    margin-right: auto
+  
+
+
+
+#suggestName 
+  position: absolute
+  width: 63.8%
+  background-color: white
+  z-index: 1010
+
+  border: 1px solid #ccc
+  border-top-color: #d9d9d9
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+
+
+
+#suggestName > ul 
+  list-style: none
+  line-height: 25px
+  margin: 0px
+
+
+#suggestName li 
+  border: none
+  overflow: hidden
+  padding: 0 10px
+  cursor: pointer
+
+
+#suggestName li:hover 
+  background-color: gainsboro
+
+
+@media (max-width: 850px) 
+  #col-desc 
+    clear: both
+  
+
+  #col-cat 
+    width: 100%
+  
+
+
+.chosen-container .chosen-container-multi .chosen-with-drop .chosen-container-active 
+  overflow: auto !important
+
+
+/*AJAX SUGGESTION */
+
+.suggest-box 
+  position: absolute
+  background-color: white
+  z-index: 1010
+  border: 1px solid #ccc
+  border-top-color: #d9d9d9
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+
+
+
+.suggest-box > ul 
+  list-style: none
+  line-height: 25px
+  margin: 0px
+
+
+.suggest-box li 
+  border: none
+  overflow: hidden
+  padding: 0 11px
+  cursor: pointer
+  color: #5a5a5a !important
+
+
+li.selected 
+  background-color: #eee
+
+
+.suggest-box li:hover 
+  background-color: #eee
+
+
+.suggest-col-2 
+  width: 96.4%
+  left: 14px
+
+
+.select 
+  background-color: #eee
+
+
+/********************-------------------------------------------*****************/
+
+/****************Busqueda**********************/
+
+#imp-busqueda 
+  position: fixed
+  top: 120px
+  right: 10px
+  z-index: 1010
+  text-align: right
+  background-color: white
+  border-radius: 7px
+  border: solid 1px #818181
+  padding: 5px
+
+
+#imp-busqueda img 
+  width: 80px
+  height: 80px
+  z-index: 1010
+  cursor: pointer
+
+
+/*****************Search Box***********************/
+
+#busqueda-box 
+  margin-left: 5%
+
+
+#s-tags 
+  width: 85%
+  margin-bottom: 5px
+
+
+#s-codigo 
+  width: 85%
+  margin-bottom: 5px
+
+
+#texto-switch-busqueda 
+  margin-right: 9px
+
+
+@media screen and (min-width: 550px) 
+  #s-tags 
+    width: 59.6%
+    margin-bottom: 5px
+
+  #s-codigo
+    width: 25%
+  
+
+
+#busquedaArt > button 
+  display: block
+  width: 90%
+  margin: 10px auto 15px auto
+  border-radius: 5px
+  background-color: #2aabd2
+  border: none
+  color: white
+  padding-bottom: 7px
+  padding-top: 7px
+
+
+#s-nombre 
+  width: 85.4%
+  margin-bottom: 5px
+  margin-top: 5px
+
+
+#give-order 
+  float: left
+  width: 100%
+  box-shadow: 0px 0px 1px #2b2b2b
+  padding-top: 15px
+  padding-bottom: 10px
+  margin-bottom: 10px
+
+
+#orden-check 
+  float: right
+  margin-right: 10px
+
+
+#range-slider 
+  float: left
+  width: 67%
+
+
+#slider-min, #slider-max 
+  float: left
+  width: 8%
+  margin-top: -4px
+
+
+#slider-max
+  padding-left: 30px
+
+
+#slider
+  float: left
+  width: 100%
+  margin-top: 15px
+  margin-bottom: 10px
+
+/*****************Resultado*************************/
+#resultados 
+  float: left
+  margin-top: 20px
+
+
+.articulo img 
+  width: 68%
+  height: 70%
+  background-color: white
+  margin-left: 16%
+  margin-right: 16%
+  margin-top: 5%
+  box-shadow: 2px 2px 2px rgba(103, 103, 103, 0.68)
+  border-radius: 1px
+
+
+.articulo 
+  width: 24%
+  height: 60%
+  float: left
+  margin: 5px
+  min-width: 225px
+  min-height: 334px
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.63)
+
+
+.art-desc 
+  width: 68%
+  display: block
+  margin-left: 16%
+  margin-right: 16%
+  max-height: 30%
+  font-family: "Roboto"
+
+
+.art-desc > .desc 
+  margin-bottom: 2px
+  margin-top: 6px
+  max-height: 14%
+  overflow: hidden
+  height: 14%
+  min-height: 14%
+
+
+@media screen and (max-width: 1135px) 
+  .articulo 
+    width: 32%
+  
+
+
+@media screen and (max-width: 895px) 
+  .articulo 
+    width: 48%
+  
+
+
+@media screen and (max-width: 600px) 
+  .articulo 
+    width: 98%
+
+/********************-----------------------------------------**************************/

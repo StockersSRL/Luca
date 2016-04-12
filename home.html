@@ -1,9 +1,26 @@
-<?php
-@session_start(); 
-if(!isset($_SESSION['user']))
-    header('location: login.php');
-?>
-<div id="header">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-1.11.1.min.js"></script>
+<!---<script src="https://code.jquery.com/jquery-1.10.2.js"></script>--->
+     <script src="js/functions.js"></script>
+     <script src="js/colors.js"></script>
+    <script src="js/home.js"></script>
+    
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/home.css" rel="stylesheet" type="text/css" media="all" />
+    
+<title>[StockMGR]</title>
+<link rel="icon" 
+      type="image/png" 
+      href="images/fav.png" />
+</head>
+<body class="noselect">
+          
+    <div id="msgHome" class="msge">ola ke ase tu vieja entangada</div> <!--clase msge para errores y msgn para notificaciones-->
+	<div id="header">
         <a id="nav-toggle" href="#"><span></span></a>
         <center>
            <img id="limage" src="images/sto.svg" height="65px" style="margin-top: 15px; position:static; max-width: 425px;"/>
@@ -20,7 +37,7 @@ if(!isset($_SESSION['user']))
        <div id="nombre" style="z-index: 8; margin-left: 35px; position: relative; top:-25px; width:200px;">
              <table id="client" cellspacing="10px" cellpadding="5px">
                   <tr>
-                      <td style="border-left: solid 3px #545557; padding: 5px; border-bottom: solid 3px #545557"><strong> <?php echo "[".$_SESSION['tipo']."] ".$_SESSION['apellido'].", ".$_SESSION['nombre'];?> </strong></td>
+                      <td style="border-left: solid 3px #545557; padding: 5px; border-bottom: solid 3px #545557"><strong> Marcos, Sysadmin </strong></td>
                   </tr>
                   <tr>
                       <td style="border-left: solid 3px #545557; padding: 5px;border-top: solid 3px #545557"><strong>Talmet</strong></td>
@@ -87,8 +104,62 @@ if(!isset($_SESSION['user']))
                <div id="tri2" ></div>
                <li class="cm2"><center>Not 1</center></li>
                <li class="cm2"><center>Not 2</center></li>
-    <a href="include/logout.php"><li class="cm2"><center>  Cerrar Sesión  </center></li></a>
+               <li class="cm2"><center>  Cerrar Sesión  </center></li>
     </ul>
    
 
     <div id="target"></div>
+    
+    <div id="content">
+        <div class="homeButton">
+            <a href="#">
+                <img class="hicon" src="images/home/addArt.svg">
+            </a>
+            <p class="HBscript"><strong>Agregar Artículo</strong></p>
+        </div>
+        <div class="homeButton">
+            <a href="#">
+                <img class="hicon" src="images/home/addUsr.svg">
+            </a>
+            <p class="HBscript"><strong>Agregar Usuario</strong></p>
+        </div>
+        <div class="homeButton">
+            <a href="#">
+                <img class="hicon" src="images/home/configUsr.svg">
+            </a>
+            <p class="HBscript"><strong>Configurar Usuario</strong></p>
+        </div>
+        <div class="homeButton">
+            <a href="#">
+                <img class="hicon" src="images/home/factura.svg">
+            </a>
+            <p class="HBscript"><strong>Realizar Factura</strong></p>
+        </div>
+        <div class="homeButton">
+            <a href="#">
+                <img class="hicon" src="images/home/log.svg">
+            </a>
+            <p class="HBscript"><strong>Ver registros de<br> actividad</strong></p>
+        </div>
+        <div class="homeButton">
+            <a href="#">
+                <img class="hicon" src="images/home/searchArt.svg">
+            </a>
+            <p class="HBscript"><strong>Buscar Artículo</strong></p>
+        </div>
+        <div class="homeButton">
+            <a href="#">
+                <img class="hicon" src="images/proveedor.svg">
+            </a>
+            <p class="HBscript"><strong>Agregar proveedor</strong></p>
+        </div>
+        <div class="homeButton">
+            <a href="#">
+                <img class="hicon" src="images/home/client.svg">
+            </a>
+            <p class="HBscript"><strong>Agregar cliente</strong></p>
+        </div>
+    </div>
+    <div id="scrollup" style="z-index:8; position:fixed; bottom:0%; float:right;"><img src="images/up.svg" width="50px" style="opacity:.92;"/></div>
+</body>
+</html>

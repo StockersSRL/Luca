@@ -3,8 +3,11 @@ function content (){
     altura -= 180;
     $('#content').css("height", ""+altura);
 }
-    
 $(document).ready(function(){
+    $(document).click(function(){
+        $('#msgHome').fadeOut(500);
+    });
+
     var inicial_width = $(window).width();
     content();
     $('#lupa').click(function(){

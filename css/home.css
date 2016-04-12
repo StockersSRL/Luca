@@ -1,20 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 #content{
-    width: 70%;
-    margin-left: 17%;
-    padding-top: 50px;
+    width: 80%;
+    margin-left: 14%;
+    padding-top: 20px;
 }
-.hicon{
+.homeButton{
     float: left;
     margin: 10px;
     margin-left: 30px;
+    cursor: pointer;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    height: 200px;
+}
+.homeButton:hover{
+    border-color: orangered;
+}
+#msgHome{
+    text-decoration-style: solid;
+    padding: 15px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    height: auto;
+    font-weight: bold;
+    width: 30%;
+    float: left;
+    position: fixed;
+    background: white;
+    opacity: .8;
+    top: 300px;
+    z-index: 100;
+    left: 35%;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 30px rgba(0,0,0,.85);
+    -moz-box-shadow: 10px 10px 30px rgba(0,0,0,.85);
+    box-shadow:  10px 10px 30px rgba(0,0,0,.85);
+}
+.msge{
+ border: 2px red solid;
+}
+.msgn{
+ border: 2px green solid;
+}
+.HBscript{
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin-top: 10px;
 }
 @media only screen and (max-width: 944px) {
     #content{
         width: 80%;
         margin-left: 15%;
     }   
+    #msgHome{
+        width: 70%;
+        left: 15%;
+    }
 }
 @media only screen and (max-width: 400px) {
+    #msgHome{
+        width: 70%;
+        left: 15%;
+    }
     #content{
         width: 90%;
         margin-left: 6%;

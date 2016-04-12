@@ -1,0 +1,361 @@
+@import url(http://fonts.googleapis.com/css?family=Laila:400,700);
+.suggest-box {
+  position: absolute;
+  background-color: white;
+  z-index: 1010;
+  border: 1px solid #ccc;
+  border-top-color: #d9d9d9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+
+.suggest-box > ul {
+  list-style: none;
+  line-height: 25px;
+  margin: 0px; }
+
+.suggest-box li {
+  border: none;
+  overflow: hidden;
+  padding: 0 11px;
+  cursor: pointer;
+  color: #5a5a5a !important; }
+
+li.selected {
+  background-color: #eee; }
+
+.suggest-box li:hover {
+  background-color: #eee; }
+
+.suggest-col-2 {
+  width: 96.4%;
+  left: 14px; }
+
+.select {
+  background-color: #eee; }
+
+html {
+  overflow-y: scroll; }
+
+#wrapper {
+  padding-top: 135px; }
+
+body {
+  font-family: Arial, Tahoma, sans-serif;
+  background-color: #025A7E;
+  font-size: 62.5%;
+  line-height: 1;
+  padding-top: 0px; }
+
+br {
+  display: block;
+  line-height: 1.6em; }
+
+input, textarea {
+  -webkit-font-smoothing: antialiased;
+  outline: none; }
+
+strong, b {
+  font-weight: bold; }
+
+em, i {
+  font-style: italic; }
+
+h1 {
+  display: block;
+  font-size: 3.1em;
+  line-height: 1.45em;
+  font-family: "Laila", serif;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #000000; }
+
+/** form field */
+form {
+  display: block;
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  font-size: 0; }
+  form div label {
+    display: block;
+    padding: 20px 20px 10px;
+    vertical-align: top;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #939393;
+    cursor: pointer; }
+  form div.switch > label {
+    padding: 16px 20px 13px; }
+  form textarea {
+    height: 100px;
+    width: 85%;
+    resize: none;
+    border: solid #939393 1.5px;
+    border: 1.5px 0px 1.5px 0px !important;
+    border-radius: 5px;
+    -webkit-margin-before: 1px; }
+  form div .col-4 {
+    height: 86px; }
+
+.col-1, .col-2, .col-3, .col-4 {
+  border-bottom: 1px solid #e4e4e4;
+  position: relative; }
+
+label input {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 26px;
+  line-height: 15px;
+  margin: 5px 5px 0;
+  padding: 7px 0px 3px;
+  border: none;
+  outline: none;
+  color: #555;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 0.6;
+  transition: all linear 0.3s;
+  overflow: visible; }
+label > select {
+  display: block;
+  width: 100%;
+  padding: 0;
+  color: #555;
+  margin: 16px 0 6px;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  opacity: 0.4;
+  transition: all linear 0.3s; }
+label > input:focus, label label > select:focus {
+  opacity: 1; }
+
+.col-submit {
+  text-align: center;
+  padding: 20px;
+  clear: both; }
+
+button {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  outline: none; }
+
+button.submitbtn {
+  background-color: #4aa0d7;
+  border-bottom: 1px solid #648c3a;
+  cursor: pointer;
+  color: #fff; }
+
+button.submitbtn:hover {
+  background-color: #0089e1; }
+
+button.submitbtn:active {
+  height: 34px;
+  border-bottom: 0;
+  margin: 1px 0 0 0;
+  background-color: #0265a5; }
+
+/******************Mobile design*********** */
+@media(max-width: 850px) {
+  form > div {
+    display: inline-block; }
+
+  .col-submit {
+    display: block; }
+
+  .col-1, .col-2, .col-3, .col-4 {
+    box-shadow: 1px 1px #e4e4e4;
+    border: none; }
+
+  .col-1, .col-2, .col-3, .col-4 {
+    width: 100%; }
+
+  .col-submit button {
+    width: 30%;
+    margin: 0 auto; } }
+/*************** Desktop design ************* */
+@media(min-width: 850px) {
+  form > div {
+    display: inline-block; }
+
+  .col-submit {
+    display: block; }
+
+  .col-1, .col-2, .col-3, .col-4 {
+    box-shadow: 1px 1px #e4e4e4;
+    border: none; }
+
+  .col-1 {
+    width: 100%; }
+
+  .col-2 {
+    width: 50%; }
+
+  .col-3 {
+    width: 33.33333%;
+    height: 75px; }
+
+  .col-4 {
+    width: 25%; }
+
+  .col-submit button {
+    width: 30%;
+    margin: 0 auto; }
+
+  form {
+    margin: 30px; } }
+.desc-tit {
+  position: relative;
+  bottom: 7px; }
+
+.border-form {
+  width: 100%;
+  float: left;
+  margin-bottom: 25px; }
+
+.unForm > .col-1, .col-2, .col-3, .col-4 {
+  float: left; }
+
+.offset {
+  position: relative;
+  top: 6px; }
+
+.upset {
+  position: relative;
+  top: -7px; }
+
+.dist {
+  position: relative;
+  top: -7px; }
+
+/*Para el titulo de descripcion */
+.desc-sub-art {
+  display: block; }
+
+/*De ineternet para el select */
+.no-chosen {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #111;
+  background: transparent;
+  width: 150px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+#col-cat > label {
+  min-height: 113px; }
+
+#btn-mas {
+  height: 35px;
+  width: 30px;
+  background-color: #8dd322;
+  cursor: pointer; }
+
+@media screen and (max-width: 505px) {
+  #btn-mas {
+    display: block;
+    width: 30%; } }
+#fomularios {
+  margin-left: 70px;
+  display: block; }
+
+label > h2 {
+  text-align: center;
+  display: inline-block; }
+
+.dlt-frm-btn {
+  background-color: red;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  margin: 0px;
+  float: right;
+  cursor: pointer; }
+
+.col-1 > label {
+  cursor: pointer; }
+
+.col-1 > label > h2 {
+  cursor: pointer; }
+
+.error {
+  border: 1px solid #ff3b3b;
+  box-shadow: 0px 0px 2px #ffa0a0; }
+
+#searchheader form {
+  margin: 0px;
+  background: none;
+  border: none;
+  border-radius: none;
+  font-size: 12pt; }
+
+.fake-input {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  background-color: white;
+  background-color: -moz-field;
+  font: -moz-field;
+  font: -webkit-small-control;
+  padding: 2px 3px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 35px; }
+
+.tag-box {
+  position: relative;
+  background-color: #eeeeee;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 3px 20px 3px 5px;
+  display: inline-block;
+  margin-left: 3px;
+  margin-bottom: 3px;
+  color: #939393;
+  font-size: 12px;
+  font-weight: bold;
+  background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-size: 100% 19px;
+  background-repeat: repeat-x;
+  background-clip: padding-box;
+  box-shadow: 0 0 2px white inset, 0 1px 0 rgba(0, 0, 0, 0.05); }
+
+#input-box {
+  width: 40%;
+  overflow: hidden;
+  border: none;
+  padding: 0px;
+  margin: 0px 0px 0px 5px;
+  height: 23px; }
+
+.close-tag {
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: url("chosen-sprite.png") -42px 1px no-repeat;
+  font-size: 1px; }
+
+/*# sourceMappingURL=form.css.map */
